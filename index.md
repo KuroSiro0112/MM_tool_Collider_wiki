@@ -7,7 +7,7 @@ hero:
   text: "Maya Collider Creation Tool"
   tagline: "素早くコライダー（Box, Sphere, Cylinder）を作成するMayaのツールです。"
   image:
-    src: ./guide/images/tool.png
+    src: /tool.png
     alt: MM_tool_Collider Screenshot
   actions:
     - theme: brand
