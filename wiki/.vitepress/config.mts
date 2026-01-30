@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-    base: '/MM_tool_Collider/',
+    base: '/MM_tool_Collider_wiki/',
     title: "MM_tool_Collider",
     description: "Maya Collider Creation Tool Documentation",
     lang: 'ja-JP',
