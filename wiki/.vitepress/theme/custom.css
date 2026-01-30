@@ -1,0 +1,208 @@
+/* Minimal Custom CSS for MM_tool_Collider Wiki */
+
+:root {
+    --vp-c-bg: #0d0d12;
+    --vp-c-bg-alt: #161618;
+    /* Sidebar background color */
+    --vp-sidebar-bg-color: var(--vp-c-bg-alt);
+    --vp-nav-bg-color: #000000;
+
+    /* Layout Proportions */
+    --vp-sidebar-width: 275px;
+    /* Narrower sidebar like reference */
+}
+
+/* Force Sidebar Width and Color */
+.VPSidebar {
+    width: var(--vp-sidebar-width) !important;
+    background-color: var(--vp-sidebar-bg-color) !important;
+    padding-left: 20px !important;
+    /* Less internal padding */
+    padding-right: 20px !important;
+}
+
+/* Adjust Content Padding to match new sidebar width */
+@media (min-width: 960px) {
+    .VPContent {
+        padding-left: var(--vp-sidebar-width) !important;
+    }
+}
+
+/* Compact Sidebar Text */
+.VPSidebarItem.level-0 .item .text {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+}
+
+.VPSidebarItem.level-1 .item,
+.VPSidebarItem.level-2 .item,
+.VPSidebarItem.level-3 .item {
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+}
+
+/* Sidebar Indentation */
+.VPSidebarItem.level-1 .item {
+    padding-left: 16px !important;
+}
+
+/* Ensure Navbar is Black */
+.VPNavBar {
+    background-color: var(--vp-nav-bg-color) !important;
+}
+
+/* Hide Theme Switch */
+.VPNavBarAppearance {
+    display: none !important;
+}
+
+/* Home Page Custom Layout - Background Image */
+.home-custom-layout {
+    background-image: linear-gradient(to bottom, rgba(13, 13, 18, 0.85), rgba(13, 13, 18, 0.95)), url('/images/トップページ.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* ==========================================================================
+   Heading Colors & Styles (Reference Design)
+   ========================================================================== */
+
+/* H1: Accent color with subtle underline */
+.vp-doc h1 {
+    color: #A8B1FF !important;
+    border-bottom: 1px solid rgba(168, 177, 255, 0.3) !important;
+    padding-bottom: 0.5rem !important;
+    margin-bottom: 1.5rem !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* H2: Bar style with left accent border */
+.vp-doc h2 {
+    color: #A8B1FF !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    /* Dark background bar */
+    border-left: 5px solid #A8B1FF !important;
+    /* Thick left border */
+    padding: 0.5rem 0.5rem 0.5rem 1rem !important;
+    margin-top: 2.5rem !important;
+    margin-bottom: 1rem !important;
+    border-bottom: none !important;
+    border-top: none !important;
+    line-height: 1.4 !important;
+    font-size: 1.4rem !important;
+}
+
+/* H3: Simple indicator */
+.vp-doc h3 {
+    color: #fff !important;
+    border-left: 3px solid #A8B1FF !important;
+    padding-left: 0.8rem !important;
+    margin-top: 2rem !important;
+    margin-bottom: 0.8rem !important;
+    font-size: 1.2rem !important;
+    line-height: 1.4 !important;
+}
+
+/* ==========================================================================
+   Page Layout: Expand Content & Shrink Right Sidebar
+   ========================================================================== */
+
+/* 1. Main Document Container: Flex row, full width */
+.VPDoc {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-right: 20px !important;
+    /* Right edge padding */
+}
+
+/* 2. Container holding Content and Aside */
+.VPDoc .container {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    width: 100% !important;
+}
+
+/* 3. Main Content Area: Expand to fill space */
+.VPDoc .content,
+.VPDoc .content-container,
+.VPDoc main {
+    flex-grow: 1 !important;
+    width: auto !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    /* Allow shrinking if needed */
+}
+
+/* Text Container inside Content */
+.vp-doc {
+    max-width: none !important;
+    width: 100% !important;
+}
+
+/* 4. Right Sidebar (ToC): Fixed narrow width (approx 1/3 of typical 250px -> ~80-100px) */
+.VPDoc .aside {
+    flex-shrink: 0 !important;
+    flex-grow: 0 !important;
+    width: 150px !important;
+    /* Slightly wider than 120px to hold text, but still narrow */
+    padding-left: 10px !important;
+}
+
+/* Ensure large screens respect the expansion */
+@media (min-width: 960px) {
+    .VPDoc {
+        padding-right: 20px !important;
+    }
+
+    .VPDoc .container {
+        max-width: none !important;
+    }
+}
+
+/* ==========================================================================
+   Homepage Hero Image Adjustment
+   ========================================================================== */
+.VPHomeHero .image-bg {
+    display: none !important;
+    /* Remove background blob/gradient if any */
+}
+
+/* Limit the overall container width to bring text and image closer */
+.VPHomeHero .container {
+    max-width: 1100px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 2rem !important;
+    /* Reduce gap between text and image */
+}
+
+.VPHomeHero .main {
+    max-width: 50% !important;
+    /* Ensure text takes half space */
+    padding-right: 0 !important;
+    /* Remove excess padding */
+}
+
+.VPHomeHero .image-container {
+    max-width: 300px !important;
+    /* Set to exactly 300px */
+    /* Reduced further */
+    max-height: none !important;
+    margin-left: 2rem !important;
+    /* spacing from text */
+    transform: translateY(100px) !important;
+    /* Force visual move down more */
+}
+
+.VPHomeHero .image img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+}
