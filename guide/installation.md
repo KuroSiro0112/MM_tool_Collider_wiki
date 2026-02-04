@@ -27,7 +27,7 @@ import sys
 import os
 
 # ツールフォルダへのパス
-tool_path = "推奨：C:\Users\<ユーザー名>\Documents\maya\scripts\00_MM\MM_tool_Collider（上記ツールを保存した場所）"
+tool_path = r"C:\Users\<ユーザー名>\Documents\maya\scripts\00_MM\MM_tool_Collider（上記ツールを保存した場所）"
 
 if tool_path not in sys.path:
     sys.path.append(tool_path)
