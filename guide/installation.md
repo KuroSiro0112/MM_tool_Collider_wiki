@@ -10,7 +10,11 @@
 
 最新版は以下からダウンロードしてください。
 
-[MM_tool_Collider をダウンロード (zip)](/MM_tool_Collider.zip)
+[MM_tool_Collider v1.0.0 をダウンロード (zip)](/MM_tool_Collider_v1.0.0.zip)
+
+### 過去バージョン
+
+- [MM_tool_Collider v0.9 (Old)](/MM_tool_Collider_v0.9.zip)
 
 ## 手順
 
